@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const registrarController = require('./cadastroController')
+const registrarController = require('./cadastroControle')
 
 router
   .get('/registrar.ejs', registrarController.pageIni)
