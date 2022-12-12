@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const registrationController = require('./cadastroController')
+const registrarController = require('./cadastroController')
 
 router
-  .get('/registration.ejs', registrationController.pageIni)
-  .post('/registration.ejs', registrationController.createRegistration)
+  .get('/registrar.ejs', registrarController.pageIni)
+  .post('/registrar.ejs', registrarController.createregistrar)
 
 module.exports = router

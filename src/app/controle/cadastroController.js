@@ -1,14 +1,14 @@
-const registration = require('../bancoDeDados/schema')
+const registrar = require('../bancoDeDados/schema')
 
-class registrationController {
-  async createRegistration(req, res) {
+class registrarController {
+  async createregistrar(req, res) {
     const usuario = req.body.usuario
     try {
       const reqBody = req.body
 
       if (reqBody.senha == reqBody.confirm) {
         req.session.usuario = usuario
-        await registration.create(reqBody)
+        await registrar.create(reqBody)
 
         return res.render('logCorrect', { usuario: usuario })
       }
@@ -17,8 +17,8 @@ class registrationController {
     }
   }
   async pageIni(req, res) {
-    return res.render('registration')
+    return res.render('registrar')
   }
 }
 
-module.exports = new registrationController()
+module.exports = new registrarController()

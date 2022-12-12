@@ -1,10 +1,10 @@
-const registration = require('../bancoDeDados/schema')
+const registrar = require('../bancoDeDados/schema')
 class LogController {
   async logPost(req, res) {
     try {
       const usuario = req.body.usuario
       const senha = req.body.senha
-      const searchusuario = await registration.findOne({
+      const searchusuario = await registrar.findOne({
         usuario: usuario,
         senha: senha,
       })
