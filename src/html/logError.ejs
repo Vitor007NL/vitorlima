@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        body * {
+            box-sizing: border-box;
+        }
+
+        .main-login {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(45deg, rgb(7, 7, 7), rgb(2, 2, 2));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rigth_login {
+            width: 40vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-login {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px 35px;
+            background: #2f2841;
+            border-radius: 20px;
+            box-shadow: linear-gradient(45deg, rgb(255, 17, 0), rgb(240, 217, 7));
+        }
+
+        .card-login>h1 {
+            color: #ff7300;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .textfield {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin: 10px 0px;
+        }
+
+        .textfield>input {
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            background: #514869;
+            color: #f0ffffde;
+            font-size: 12pt;
+            box-shadow: 0px 10px 40px #00000056;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .textfield>label {
+            color: #f0ffffde;
+            margin-bottom: 10px;
+        }
+
+        .textfield>input::placeholder {
+            color: #f0ffff94;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 16px 0px;
+            margin: 25px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: #2b134b;
+            background: #f75e06;
+            cursor: pointer;
+            box-shadow: 0px 10px 40px -12px #00ff8052;
+        }
+
+        @media only screen and (max-width: 950px) {
+            .card-login {
+                width: 85%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .rigth_login {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .card-login {
+            width: 90%;
+        }
+
+        .registro>a {
+            color: #ff7300;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .textfield>h5 {
+            color: #f0ffffde;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-login">
+        <form method="post">
+            <div class="rigth_login">
+                <div class="card-login">
+                    <h1>senha ou usuario incorreto!</h1>
+                    <div class="textfield" met>
+                        <label for="usuario">usuario</label>
+                        <input type="text" name="usuario" placeholder="Usuário">
+                    </div>
+                    <div class="textfield">
+                        <label for="senha">senha</label>
+                        <input type="senha" name="senha" placeholder="senha">
+                    </div>
+                    <button class="btn-login">Login</button>
+                    <div class="registro">
+                        <a href="./registration.ejs" target="_blank">não tem conta? registrar aqui!</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
