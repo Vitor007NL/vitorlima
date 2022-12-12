@@ -10,7 +10,7 @@ class registrarController {
         req.session.usuario = usuario
         await registrar.create(reqBody)
 
-        return res.render('logCorrect', { usuario: usuario })
+        return res.render('loginCorreto', { usuario: usuario })
       }
     } catch (error) {
       return res.send(error)

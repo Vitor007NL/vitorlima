@@ -10,11 +10,11 @@ class LogController {
       })
 
       if (!searchusuario) {
-        return res.render('logError')
+        return res.render('loginErro')
       } else {
         req.session.usuario = usuario
 
-        return res.render('logCorrect', { usuario: usuario })
+        return res.render('loginCorreto', { usuario: usuario })
       }
     } catch (error) {
       return res.send(error)
